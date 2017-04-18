@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "ROX"
   s.version      = "0.0.1"
-  s.summary      = "The Fastest Way to Safely Deploy Mobile Features"
+  s.summary      = "Continuous Feature Rollouts for Mobile"
   s.description  = "The Fastest Way to Safely Deploy Mobile Features"
 
   s.homepage     = "https://rollout.io"
