@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
 
   s.name         = "ROX"
-  s.version      = "0.0.1"
+  s.version      = "0.4.0"
   s.summary      = "Continuous Feature Rollouts for Mobile"
-  s.description  = "The Fastest Way to Safely Deploy Mobile Features"
+  s.description  = "Release mobile features quickly and safely with fully controlled rollouts, measure impact, and react as needed without waiting for your next code release."
 
   s.homepage     = "https://rollout.io"
   s.license      = {
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'ROX/ROX.framework'
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(inherited)' }
 
-  s.source       = { :git => "https://github.com/rollout/rox-ios.git", :tag => "0.0.1" }
-  s.preserve_paths = "lib/**/*", "install/**/*", "RolloutFeatureFlags/*"
+  s.source       = { :git => "https://github.com/rollout/rox-ios.git", :tag => "0.4.0" }
+  s.preserve_paths = "lib/**/*", "install/**/*", "ROXFlags/*"
 
 end

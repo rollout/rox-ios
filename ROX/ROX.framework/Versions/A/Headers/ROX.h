@@ -1,5 +1,5 @@
 //
-//  ROX SDK version 0.0.1, Build 359
+//  ROX SDK version 0.4.0, Build 374
 //
 //  Copyright (c) 2014 ROX.io. All rights reserved.
 //
@@ -8,22 +8,34 @@
 #import <Foundation/Foundation.h>
 #import "ROXOptions.h"
 #import "ROXFlag.h"
+#import "ROXTargetGroup.h"
+#import "ROXExperiment.h"
 
 @interface ROX : NSObject
 
 +(void)setupWithKey:(NSString *)roxKey;
 +(void)setupWithKey:(NSString *)roxKey options:(ROXOptions *)options;
 +(BOOL)roxDisabled;
-+(void)setRoxDisabled:(BOOL)value;
-
-+(void)setupWithKey:(NSString *)roxKey developmentDevice: (BOOL)developmentDevice __attribute__ ((deprecated));
-+(void)setupWithKey:(NSString *)roxKey developmentDevice:(BOOL)developmentDevice options:(ROXOptions*)options __attribute__ ((deprecated));
-
-+(void) setupWithDebug: (BOOL) debug options:(ROXOptions*)options __attribute__ ((deprecated));
-+(void) setupWithDebug: (BOOL) debug __attribute__ ((deprecated));
 
 + (UIViewController*)featuresViewController;
 + (BOOL)isTestDevice;
+
++(void) setUserStringProperty:(NSString*)value forKey:(NSString*)key;
++(void) setUserComputedStringProperty:(NSString* (^)())block forKey:(NSString*)key;
+
++(void) setUserBooleanProperty:(BOOL)value forKey:(NSString*)key;
++(void) setUserComputedBooleanProperty:(BOOL (^)())block forKey:(NSString*)key;
+
++(void) setUserIntProperty:(int)value forKey:(NSString*)key;
++(void) setUserComputedIntProperty:(int (^)())block forKey:(NSString*)key;
+
++(void) setUserDoubleProperty:(double)value forKey:(NSString*)key;
++(void) setUserComputedDoubleProperty:(double (^)())block forKey:(NSString*)key;
+
++(BOOL) isInTargetGroup:(NSString*)name;
++(NSArray<ROXTargetGroup *>*) targetGroups;
+
++(NSArray<ROXExperiment *>*) experiments;
 
 @end
 

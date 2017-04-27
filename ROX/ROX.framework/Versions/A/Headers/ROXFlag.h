@@ -13,7 +13,8 @@
 @property (readonly, nonatomic) BOOL isEnabled;
 @property (readonly, nonatomic) NSString* name;
 
--(void)enabled:(void (^)(void))codeBlock;
--(void)disabled:(void (^)(void))codeBlock;
+- (void)enabled:(void (^)(void))codeBlock;
+- (void)disabled:(void (^)(void))codeBlock;
+- (void)enabled:(void (^)(void))enabledCodeBlock disabled:(void (^)(void))disabledCodeBlock;
 
 @end

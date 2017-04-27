@@ -12,7 +12,7 @@
 @protocol ROXErrors;
 
 @class ROXFeatureFlagId;
-@class ROXExperiment;
+@class ROXExperimentModel;
 
 @interface ROXConfiguration : NSObject
 
