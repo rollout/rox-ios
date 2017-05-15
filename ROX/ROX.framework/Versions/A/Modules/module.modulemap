@@ -1,8 +1,0 @@
-framework module ROX {
-    umbrella header "ROX.h"
-
-    header "private/ROXConfiguration.h"
-    header "private/ROXErrors.h"
-    
-    link "stdc++"
-}
