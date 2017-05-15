@@ -23,4 +23,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/rollout/rox-ios.git", :tag => "0.6.0" }
   s.preserve_paths = "lib/**/*", "install/**/*", "ROXFlags/*"
 
+  s.ios.deployment_target  = '8.0'
 end
