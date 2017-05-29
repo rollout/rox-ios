@@ -1,5 +1,5 @@
 //
-//  ROX SDK version 0.7.0, Build 393
+//  ROX SDK version 0.9.0, Build 399
 //
 //  Copyright (c) 2014 ROX.io. All rights reserved.
 //
@@ -17,7 +17,7 @@
 +(void)setupWithKey:(NSString *)roxKey options:(ROXOptions *)options;
 +(BOOL)roxDisabled;
 
-+ (UIViewController*)featuresViewController;
++ (UIViewController*)flagsViewController;
 + (BOOL)isTestDevice;
 
 +(void) setCustomStringProperty:(NSString*)value forKey:(NSString*)key;
@@ -35,12 +35,8 @@
 +(void) setCustomSemverProperty:(NSString*)value forKey:(NSString*)key;
 +(void) setCustomComputedSemverProperty:(NSString* (^)())block forKey:(NSString*)key;
 
-+(BOOL) isInTargetGroup:(NSString*)name;
-+(NSArray<ROXTargetGroup *>*) targetGroups;
-
-+(NSArray<ROXExperiment *>*) experiments;
-
 +(void) sync;
++(void) unfreeze;
 
 @end
 
