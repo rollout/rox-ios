@@ -1,5 +1,5 @@
 //
-//  ROX SDK version 0.9.0, Build 399
+//  ROX SDK version 0.10.0, Build 403
 //
 //  Copyright (c) 2014 ROX.io. All rights reserved.
 //
@@ -37,6 +37,10 @@
 
 +(void) sync;
 +(void) unfreeze;
+
+#ifdef DEBUG
+void resetROXDispatchOnce(void);
+#endif
 
 @end
 
