@@ -12,7 +12,8 @@
 
 @property (nonatomic, readonly) NSString* name;
 @property (nonatomic, readonly) BOOL isEnabled;
+@property (nonatomic, readonly) NSString* identifier;
 
--(instancetype)initWithName:(NSString*)name isEnabled:(BOOL)isEnabled;
+-(instancetype)initWithName:(NSString*)name isEnabled:(BOOL)isEnabled identifier:(NSString*)identifier;
 
 @end
