@@ -1,5 +1,5 @@
 //
-//  ROX SDK version 0.11.0, Build 405
+//  ROX SDK version 0.12.0, Build 406
 //
 //  Copyright (c) 2014 ROX.io. All rights reserved.
 //
