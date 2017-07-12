@@ -1,6 +1,0 @@
-framework module ROX {
-  umbrella header "ROX.h"
-
-  export *
-  module * { export * }
-}
