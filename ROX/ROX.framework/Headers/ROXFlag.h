@@ -16,5 +16,6 @@
 - (void)enabled:(void (^)(void))codeBlock;
 - (void)disabled:(void (^)(void))codeBlock;
 - (void)enabled:(void (^)(void))enabledCodeBlock disabled:(void (^)(void))disabledCodeBlock;
+- (void)forceValue:(BOOL)value;
 
 @end

@@ -21,6 +21,10 @@ typedef enum {
 @property (nonatomic, copy, nullable) ROXSyncCompletionHandler syncCompletionHandler;
 @property (nonatomic) BOOL disableSyncLoadingFallback;
 @property (nonatomic) ROXOptionsVerboseLevel verbose;
+/**
+ Setting this options to YES will prevent the SDK from handling and reporting crashed sessions.
+ */
+@property (nonatomic) BOOL disableCrashReporting;
 @property (nonatomic, strong) NSArray * _Nullable silentFiles;
 @property (nonatomic) BOOL roxDisabled;
 @property (nonatomic, copy) NSString * _Nullable customSigningCertificate;
