@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/rollout/rox-ios.git", :tag => "4.10.16" }
 
-  s.source_files = '**/*.{h,swift}'
+  s.source_files = 'RoxSdk/**/*.{h,swift}'
 
   s.dependency 'ROXCore', '4.10.16'
 

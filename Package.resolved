@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ROXCore",
+        "repositoryURL": "https://github.com/arnauddorgans/rox-ios-core",
+        "state": {
+          "branch": "spm",
+          "revision": "41bfc0c587a0c7c0b2b2207bd2f69fd6e203b8ee",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
