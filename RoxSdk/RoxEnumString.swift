@@ -1,24 +1,24 @@
 import Foundation
 import ROXCore
 
-protocol ROXVariantableType {
-    var objcBridge : ROXVariant { get }
+protocol ROXStringableType {
+    var objcBridge : ROXString { get }
 }
 
-public class RoxEnumVariant<T:RawRepresentable> : ROXVariantableType where T.RawValue == Int {
+public class RoxEnumString<T:RawRepresentable> : ROXStringableType where T.RawValue == Int {
     private let defaultValue: T
     private let values :[String: T]
-    fileprivate let rawVariant : ROXVariant
+    fileprivate let rawVariant : ROXString
     public init(_ defaultValue:T){
         self.defaultValue = defaultValue
-        self.values = RoxEnumVariant<T>.allValues(defaultValue)
-        self.rawVariant = ROXVariant(withDefault: String(describing: defaultValue), options: Array(values.keys))
+        self.values = RoxEnumString<T>.allValues(defaultValue)
+        self.rawVariant = ROXString(withDefault: String(describing: defaultValue), variations: Array(values.keys))
     }
     
     public init(_ defaultValue:T, freeze: ROXFreeze){
         self.defaultValue = defaultValue
-        self.values = RoxEnumVariant<T>.allValues(defaultValue)
-        self.rawVariant = ROXVariant(withDefault: String(describing: defaultValue), options: Array(values.keys), freeze: freeze)
+        self.values = RoxEnumString<T>.allValues(defaultValue)
+        self.rawVariant = ROXString(withDefault: String(describing: defaultValue), variations: Array(values.keys), freeze: freeze)
     }
     
     public var value: T {
@@ -39,7 +39,7 @@ public class RoxEnumVariant<T:RawRepresentable> : ROXVariantableType where T.Raw
     
     private static func allValues(_ oneValue: T) -> [String: T]{
         var result = [String: T]()
-        for i in RoxEnumVariant<T>.enumerate() {
+        for i in RoxEnumString<T>.enumerate() {
             result[String(describing:i)] = i
         }
         return result
@@ -53,7 +53,7 @@ public class RoxEnumVariant<T:RawRepresentable> : ROXVariantableType where T.Raw
         }
     }
     
-    public var objcBridge : ROXVariant {
+    public var objcBridge : ROXString {
         get {
             return self.rawVariant
         }
