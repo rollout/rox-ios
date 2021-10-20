@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ROX"
-  s.version      = "5.0.7"
+  s.version      = "5.0.8"
   s.summary      = "Continuous Feature Rollouts for Mobile"
   s.description  = "Release mobile features quickly and safely with fully controlled rollouts, measure impact, and react as needed without waiting for your next code release."
 
@@ -17,11 +17,11 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source       = { :git => "https://github.com/rollout/rox-ios.git", :tag => "5.0.7" }
+  s.source       = { :git => "https://github.com/rollout/rox-ios.git", :tag => "5.0.8" }
 
   s.source_files = '**/*.{h,swift}'
 
-  s.dependency 'ROXCore', '5.0.7'
+  s.dependency 'ROXCore', '5.0.8'
 
   s.swift_version = '4.0'
   
